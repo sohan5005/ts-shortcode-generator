@@ -12,7 +12,7 @@ return array(
         'desc' => __( 'This is a sample tab of shortcodes.', 'textdomain' ),
         'shortcodes' => array(
             array(
-                'tag' => 'shortcode_sample_1',
+                'tag' => 'shortcode_sample_1', // The actual tag of the shortcode
                 'title' => __( 'Sample shortcode 1', 'textdomain' ),
                 'desc' => __( 'This is a shortcode sample.', 'textdomain' ),
                 'selftag' => true, // if the shortcode should not contain any content
