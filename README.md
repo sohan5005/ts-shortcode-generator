@@ -39,6 +39,14 @@ array( // the main array
 ```
 The code shown above is NOT A VALID template but to give you a basic idea of how it works. A sample valid template is included with the package so that you can play with it. All things are commented properly.
 
+## Features
+- Awesome designed UI
+- 13 useful built-in field types
+- Fully extendable, you can create your own field types
+- Supports nesting/repeating/sortable shortcodes with WP editor
+- Multiple instances
+- Unlimited level of nesting inside WP Editor
+
 ## Field types
 Currently there are 13 available filed types:
 
