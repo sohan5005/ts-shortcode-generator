@@ -19,6 +19,10 @@ new TS_Shortcode_Generator(array(
     'template' => $template,     // Shortcode template array
 ));
 ```
+To see a sample, just include the sample file in your project:
+```
+require_once( dirname(__FILE__) . '/ts-shortcode-generator/sample-init.php' );
+```
 ## Template structure
 The template is little strictly formatted but easy to understand. It's just a simple multidimensional PHP array. Like this:
 
