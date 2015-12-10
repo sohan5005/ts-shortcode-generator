@@ -377,7 +377,7 @@
                     $(this).addClass('active');
                     $(this).siblings().removeClass('active');
                     header.find('.ts-scg-icons-default-now').html(val);
-                    headerIcon.attr( 'class', 'sup-icon ' + val );
+                    headerIcon.attr( 'class', 'fa ' + val );
                 });
                 header.click(function() {
                     collection.slideToggle();

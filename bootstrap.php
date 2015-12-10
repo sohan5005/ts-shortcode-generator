@@ -424,13 +424,14 @@ if( !function_exists( 'ts_generator_scripts_styles' ) ) {
         }
 
         wp_enqueue_style( 'ts-generator-styles', plugins_url( 'assets/', __FILE__ ) . 'css/generator.css', '1.0' );
-        wp_register_style( 'ts-font-awesome', plugins_url( 'assets/', __FILE__ ) . 'css/font-awesome.min.css', '4.4.0' );
+        wp_enqueue_style( 'ts-font-awesome', plugins_url( 'assets/', __FILE__ ) . 'css/font-awesome.min.css', '4.4.0' );
+        wp_enqueue_style( 'ts-select2-css', plugins_url( 'assets/', __FILE__ ) . 'css/select2.css', '1.1' );
+        wp_enqueue_style( 'ts-bootstrap-colorpicker-css', plugins_url( 'assets/', __FILE__ ) . 'css/bootstrap-colorpicker.min.css', '1.1' );
         wp_register_script( 'ts-kia-metabox', plugins_url( 'assets/', __FILE__ ) . 'js/kia-metabox.js', array( 'jquery' ), '1.0', true );
+        wp_register_script( 'ts-bootstrap-colorpicker', plugins_url( 'assets/', __FILE__ ) . 'js/bootstrap-colorpicker.min.js', array( 'jquery' ), '1.0', true );
         wp_register_script( 'ts-select2', plugins_url( 'assets/', __FILE__ ) . 'js/select2.min.js', array( 'jquery' ), '1.0', true );
-        wp_enqueue_script( 'ts-generator-scripts', plugins_url( 'assets/', __FILE__ ) . 'js/generator.js', array( 'jquery', 'ts-kia-metabox', 'jquery-ui-slider', 'jquery-ui-datepicker', 'jquery-ui-sortable', 'ts-select2' ), '1.0', true );
+        wp_enqueue_script( 'ts-generator-scripts', plugins_url( 'assets/', __FILE__ ) . 'js/generator.js', array( 'jquery', 'ts-bootstrap-colorpicker', 'ts-kia-metabox', 'jquery-ui-slider', 'jquery-ui-datepicker', 'jquery-ui-sortable', 'ts-select2' ), '1.0', true );
         wp_enqueue_script( 'ts-generator-localizer', plugins_url( 'assets/', __FILE__ ) . 'js/plugin-empty.js', '', '1.0', false );
-        
-        wp_enqueue_style( 'ts-font-awesome' );
 
         wp_localize_script( 'ts-generator-localizer', 'ts_shortcode_generator_instances', $ts_shortcode_generator_instances );
 

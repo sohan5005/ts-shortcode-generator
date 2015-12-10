@@ -914,6 +914,13 @@
 
 .colorpicker.dropdown-menu {
     z-index: 9999;
+	float: left;
+	clear: both;
+}
+
+.tsg-multiselect-select-element {
+	display: block;
+	width: 100%;
 }
 
 .tsg-colorpicker-input {

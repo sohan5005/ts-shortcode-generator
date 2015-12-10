@@ -12,7 +12,7 @@ return array(
         'desc' => __( 'This is a sample tab of shortcodes.', 'textdomain' ),
         'shortcodes' => array(
             array(
-                'tag' => 'shortcode_sample_1', // The actual tag of the shortcode
+                'tag' => 'shortcode_sample_1',
                 'title' => __( 'Sample shortcode 1', 'textdomain' ),
                 'desc' => __( 'This is a shortcode sample.', 'textdomain' ),
                 'selftag' => true, // if the shortcode should not contain any content
@@ -23,6 +23,12 @@ return array(
                         'title' => __( 'Toggle field', 'textdomain' ),
                         'desc' => __( 'Description', 'textdomain' ),
                         'type' => 'toggle',
+                        'default' => true,
+                    ),
+                    'color' => array(
+                        'title' => __( 'Color field', 'textdomain' ),
+                        'desc' => __( 'Description', 'textdomain' ),
+                        'type' => 'color',
                         'default' => true,
                     ),
                     'select_attribute' => array(
@@ -57,7 +63,7 @@ return array(
                     'slider_attribute' => array(
                         'title' => __( 'slider field', 'textdomain' ),
                         'desc' => __( 'Description', 'textdomain' ),
-                        'type' => 'toggle',
+                        'type' => 'slider',
                         'default' => 1,
                         'min' => 1,
                         'max' => 10,
