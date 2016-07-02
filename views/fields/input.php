@@ -4,9 +4,9 @@
  */
 
 if( isset( $args['default'] ) ) {
-    $val = $args['default'];
+	$val = $args['default'];
 } else {
-    $val = '';
+	$val = '';
 }
 
 ?>

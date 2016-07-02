@@ -75,6 +75,14 @@ You can have your own field type. To do that, add a new php file in "\views\fiel
 2. You can only modify the field view, not the title area
 3. There must be an input field with "ts-scg-value-collector" class. It can be hidden or visible, but must present inside your view file. If you use other fields there, you must bind the value to this field at the end. This is where the value is collected.
 
+## Update for theme integration
+Please define 2 constants before you call the `bootstrap.php` from core. One is relative path on server, the other one is url for js, css & images. Both of the constants must be targeted to the directory containing the `bootstrap.php` file without any backslash at the end. For example:
+
+```
+define( 'TS_SCG_PATH', get_template_directory() . '/inc/ts-shortcode-generator' );
+define( 'TS_SCG_URL', get_template_directory_uri() . '/inc/ts-shortcode-generator' );
+require_once get_template_directory() . '/inc/ts-shortcode-generator/sample-init.php'; // This file loads the bootrap.php automatically.
+```
 ## Where is the documentation?
 I'm working on the documentation. I will put a full documentation soon :)
 
