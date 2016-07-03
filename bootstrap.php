@@ -163,11 +163,11 @@ if( !class_exists( 'TS_Shortcode_Generator' ) ) :
 
 			$shortcodes = array();
 
-			foreach( $template as $group ) {
+			foreach( $template as $x => $group ) {
 
-				foreach( $group['shortcodes'] as $tag_args ) {
+				foreach( $group['shortcodes'] as $i => $tag_args ) {
 
-					$shortcodes[$tag_args['tag']] = $tag_args;
+					$shortcodes[$tag_args['tag'] . '_' . $x . $i] = $tag_args;
 
 				}
 

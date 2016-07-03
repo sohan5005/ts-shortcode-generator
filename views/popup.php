@@ -54,7 +54,7 @@ if( count( $template ) == 1 ) {
 			}
 			$output = '';
 			$output .= sprintf( '<ul data-group-id="%s" class="ts-scg-groups-shortcodes%s">', $group['name'], $active );
-			foreach( $group['shortcodes'] as $shorcode ) {
+			foreach( $group['shortcodes'] as $x => $shorcode ) {
 
 				$active = '';
 
@@ -74,7 +74,7 @@ if( count( $template ) == 1 ) {
 					$icon_file = TS_SCG_URL . '/../assets/img/icons/default.png';
 				}
 
-				$output .= sprintf( '<li data-target-shortcode="%s"%s><div class="tsg-shortcode-module-inner">', esc_attr( $shorcode['tag'] ), $active );
+				$output .= sprintf( '<li data-target-shortcode="%s"%s><div class="tsg-shortcode-module-inner">', esc_attr( $shorcode['tag'] . '_' . $i . $x ), $active );
 
 				if( substr( $icon_source, 0, 3 ) === 'fa-' ) {
 					$output .= sprintf( '<div class="module-icon"><i class="fa %s"></i></div>', esc_attr( $icon_source ) );
