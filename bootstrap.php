@@ -98,6 +98,8 @@ if( !class_exists( 'TS_Shortcode_Generator' ) ) :
 		 * @return void
 		 */
 		public function ts_register_button( $buttons ) {
+			global $ts_mce_activated;
+			$ts_mce_activated = true;
 			array_push( $buttons, 'separator', $this->name );
 			return $buttons;
 		}
@@ -397,6 +399,12 @@ add_action( 'admin_footer', 'ts_generator_add_dummy_elements', 999 );
 
 if( !function_exists( 'ts_generator_add_dummy_elements' ) ) {
 	function ts_generator_add_dummy_elements() {
+		
+		global $ts_mce_activated;
+
+		if( $ts_mce_activated !== true ) {
+			return;
+		}
 
 		echo '<div id="ts-generator-overlay"><div class="tsg-loader ts-animated ts-animate-loader"></div></div><div id="ts-generator-root"></div>';
 
@@ -424,6 +432,10 @@ if( !function_exists( 'ts_generator_scripts_styles' ) ) {
 		}
 
 		if( get_user_option('rich_editing') != 'true' ) {
+			return;
+		}
+		
+		if( ! wp_script_is( 'mce-view' ) ) {
 			return;
 		}
 
